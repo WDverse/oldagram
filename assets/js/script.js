@@ -1,10 +1,11 @@
 const heartIconEl = document.getElementById("heart-icon");
+const userPostEl = document.getElementById("user-post");
 const likesEl = document.getElementById("likes");
 
 //if the heart has not been clicked increase like by 1
 // if it has been clicked, remove like when clicked again
 
-const increaseLikeCount = () => {
+const handleLikes = () => {
   let likes = parseInt(likesEl.textContent);
   likesEl.classList.toggle("liked");
   likesEl.classList.toggle("not-liked");
@@ -21,5 +22,5 @@ const increaseLikeCount = () => {
     heartIconEl.classList.add("red-heart");
   }
 };
-
-heartIconEl.addEventListener("click", increaseLikeCount);
+userPostEl.addEventListener("dblclick", handleLikes)
+heartIconEl.addEventListener("click", handleLikes);

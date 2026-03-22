@@ -42,6 +42,9 @@ span{
     width: 100%;
     height: 100%;
 }
+.post:hover{
+    cursor: pointer;
+}
 
 .icons{
     width: 22.5px;
